@@ -1,0 +1,395 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --primary-color: #dae066;
+    --secondary-color: #757c27;
+    --dark-olive: #3d3e1e;
+    --light-bg: #dedede;
+    --dark-gray: #181818;
+    --darker-gray: #111111;
+    --white: #ffffff;
+    --text-primary: #111111;
+    --text-secondary: #3d3e1e;
+    --text-light: #757c27;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--light-bg);
+    min-height: 100vh;
+    color: var(--text-primary);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 1rem;
+    width: 100%;
+}
+
+/* Toolbar Search Bar */
+.toolbar {
+    background: #f8f9f0;
+    border: 1px solid var(--primary-color);
+    border-radius: 8px;
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.toolbar-title {
+    color: var(--dark-olive);
+    font-weight: 600;
+    font-size: 1.1rem;
+    flex: 1;
+    min-width: 250px;
+}
+
+.search-toolbar input {
+    padding: 0.6rem 1rem;
+    border: 1px solid var(--secondary-color);
+    border-radius: 4px;
+    width: 250px;
+    background: white;
+}
+
+.search-toolbar input:focus {
+    outline: none;
+    border-color: var(--dark-olive);
+}
+
+/* Navigation Accordion */
+.navigation {
+    display: block;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.nav-options {
+    background: #f8f9f0;
+    border: 2px solid var(--primary-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    transition: all 0.2s ease;
+}
+
+.nav-head {
+    color: var(--dark-olive);
+    font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.nav-sub {
+    color: var(--text-secondary);
+    font-size: clamp(0.9rem, 2vw, 1rem);
+    margin-left: 1rem;
+    margin-bottom: 0.5rem;
+    list-style: none;
+}
+
+.accordion-content {
+    display: none;
+}
+
+/* Command Section */
+.command-section {
+    background: var(--white);
+    border: 2px solid var(--secondary-color);
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(58, 62, 30, 0.1);
+}
+
+.command-header {
+    background: var(--dark-olive);
+    color: var(--primary-color);
+    padding: 1.5rem;
+    font-weight: 600;
+    font-size: clamp(1.1rem, 3vw, 1.3rem);
+    letter-spacing: 0.02em;
+}
+
+.command-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.command-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.command-item {
+    background: #f8f9f0;
+    border: 1px solid var(--primary-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    transition: all 0.2s ease;
+    border-left: 4px solid var(--secondary-color);
+}
+
+.command-item:hover {
+    background: #f0f2e6;
+}
+
+.command-number {
+    font-weight: bold;
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+}
+
+.command-name {
+    font-weight: 600;
+    color: var(--dark-olive);
+    margin-bottom: 0.5rem;
+}
+
+.command-description {
+    color: var(--text-secondary);
+    font-size: 1rem;
+}
+
+/* Video Section */
+.video-section {
+    margin-top: 2rem;
+}
+
+.video-container {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: var(--dark-gray);
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+}
+
+.video-info {
+    margin-top: 1rem;
+}
+
+.video-title {
+    font-weight: 600;
+    color: var(--dark-olive);
+    font-size: clamp(1rem, 2vw, 1.2rem);
+}
+
+.video-description {
+    color: var(--text-secondary);
+    font-size: clamp(0.85rem, 2vw, 1rem);
+    line-height: 1.6;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .toolbar {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+    }
+    .toolbar-title {
+        margin-bottom: 1rem;
+        min-width: auto;
+    }
+    .search-toolbar input {
+        width: 100%;
+    }
+    .command-content {
+        padding: 1rem;
+    }
+    .nav-options {
+        padding: 1rem;
+    }
+}
+
+/* Small phones (up to 480px) */
+@media (max-width: 480px) {
+    .container {
+        padding: 0.75rem;
+    }
+    
+    .command-header {
+        padding: 1rem;
+    }
+    
+    .command-content {
+        padding: 1.5rem;
+        gap: 1.5rem;
+    }
+    
+    .command-item {
+        padding: 1.25rem;
+    }
+    
+    .nav-options {
+        padding: 1.25rem;
+    }
+    
+    .video-info {
+        padding: 1.25rem;
+    }
+    
+}
+
+/* Medium phones and small tablets (481px to 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+    .container {
+        padding: 1.25rem;
+    }
+    
+    .command-content {
+        padding: 2rem;
+        gap: 2rem;
+    }
+    
+    .navigation {
+        margin-bottom: 2.5rem;
+    }
+}
+
+/* Large tablets and small laptops (769px to 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .container {
+        padding: 1.5rem;
+    }
+    
+    .command-content {
+        grid-template-columns: 1fr;
+        padding: 2.5rem;
+        gap: 2.5rem;
+    }
+}
+
+/* Desktop and larger screens (1025px and up) */
+@media (min-width: 1025px) {
+    .container {
+        padding: 2rem;
+    }
+    
+    .command-content {
+        grid-template-columns: 1fr 1fr;
+        padding: 3rem;
+        gap: 3rem;
+    }
+    
+    .navigation {
+        margin-bottom: 3rem;
+    }
+    
+    .nav-options {
+        padding: 2rem;
+    }
+}
+
+/* Large desktop screens (1400px and up) */
+@media (min-width: 1400px) {
+    .command-item {
+        padding: 2rem;
+    }
+    
+    .command-header {
+        padding: 1.5rem 2rem;
+    }
+}
+
+/* Extra large screens (1800px and up) */
+@media (min-width: 1800px) {
+    .container {
+        padding: 3rem;
+    }
+}
+
+/* Landscape orientation adjustments for mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+    .container {
+        padding: 1rem;
+    }
+    
+    .command-content {
+        padding: 1.5rem;
+        gap: 1.5rem;
+    }
+    
+    .command-item {
+        padding: 1rem;
+    }
+    
+    .video-container {
+        aspect-ratio: 21/9; /* Wider aspect ratio for landscape */
+    }
+}
+
+/* High DPI screens */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .command-section {
+        box-shadow: 0 2px 10px rgba(58, 62, 30, 0.15);
+    }
+}
+
+/* Minimal scrollbar styling */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--light-bg);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--secondary-color);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--dark-olive);
+}
+
+/* Firefox scrollbar */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--secondary-color) var(--light-bg);
+}
+
+/* Focus and accessibility improvements */
+.play-button:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+.command-item:focus-within {
+    outline: 2px solid var(--secondary-color);
+    outline-offset: 1px;
+}
+
+/* Print styles */
+@media print {
+    .video-section {
+        display: none;
+    }
+    
+    .command-content {
+        grid-template-columns: 1fr;
+    }
+    
+    * {
+        color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+}

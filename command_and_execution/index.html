@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAT & ROTC - Command and Execution</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+
+        <!-- Toolbar Search Bar -->
+        <div class="toolbar">
+            <div class="toolbar-title">
+                CAT & ROTC - Command and Execution
+            </div>
+            <div class="search-toolbar">
+                <input type="text" placeholder="Search commands...">
+            </div>
+        </div>
+
+        <!-- Navigation Accordion -->
+        <nav class="navigation">
+            <ul class="nav-options">
+                <h2 class="nav-head accordion-toggle" id="soldiersAccordion">
+                    1. PAGSASANAY NG KAWAL NA WALANG SANDATA (SCHOOL FOR SOLDIERS WITHOUT ARMS) ▼
+                </h2>
+                <div class="accordion-content" id="soldiersAccordionContent">
+                    <li class="nav-sub">A. Katayuan sa Pagtindig (Position of Attention)</li>
+                    <li class="nav-sub" style="text-decoration: underline;">B. Katayuan sa Paghinga Nakahinto (Rest at Halt)</li>
+                    <li class="nav-sub">C. Pagharap Kung Nakahinto (Facing at the Halt)</li>
+                    <li class="nav-sub">D. Pagpugay (Salute)</li>
+                </div>
+                <h2 class="nav-head">2. MALAPITANG PAGSASANAY (CLOSE ORDER DRILL)</h2>
+                <h2 class="nav-head">3. MGA UTOS SA PATIKAS AT PAGMASID NG SEREMONYA (COMMANDS FOR PARADE AND REVIEW)</h2>
+            </ul>
+        </nav>
+
+        <main id="commandSections">
+            <!-- Stationary Commands Section -->
+            <section class="command-section" id="stationary-section">
+                <div class="command-header">
+                    B. KATAYUAN SA PAGHINGA NAKAHINTO (REST AT HALT)
+                </div>
+                <div class="command-content">
+                    <div class="command-list">
+                        <div class="command-item">
+                            <div class="command-number">01</div>
+                            <div class="command-name">TIKAS PAHINGA</div>
+                            <div class="command-description">
+                                Nakatayo nang diretso, nakahiwalay nang kaunti ang mga paa, nakalapat ang mga kamay sa likod. Disiplinado at tahimik ang tindig, bawal gumalaw.
+                            </div>
+                        </div>
+                        
+                        <div class="command-item">
+                            <div class="command-number">02</div>
+                            <div class="command-name">TINDIG PALUWAG</div>
+                            <div class="command-description">
+                                Halos kapareho ng Parade Rest, pero mas maluwag. Maaaring bahagyang gumalaw, pero bawal magsalita.
+                            </div>
+                        </div>
+
+                        <div class="command-item">
+                            <div class="command-number">03</div>
+                            <div class="command-name">PALUWAG</div>
+                            <div class="command-description">
+                                Pinapayagan kang gumalaw ng bahagya para mag-inat o mag-ayos, pero bawal pa ring magsalita.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="video-section">
+                        <div class="video-container">
+                            <!-- Example YouTube Video Embed -->
+                            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/KY4RQN43Cs8?si=be3oWn7ZdvFjSCU3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <div class="video-info">
+                            <div class="video-title">Execution Demonstration: Katayuan sa Paghina Nakahinto (Rest at Halt)</div>
+                            <div class="video-description">
+                                Watch the proper execution of Katayuan sa Paghina Nakahinto (Rest at Halt). Pay attention to posture, foot positioning, and hand placement for each command.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        // Accordion toggle functionality
+        document.getElementById('soldiersAccordion').addEventListener('click', function() {
+            const content = document.getElementById('soldiersAccordionContent');
+            if (content.style.display === 'none' || content.style.display === '') {
+                content.style.display = 'block';
+                this.innerHTML = '1. PAGSASANAY NG KAWAL NA WALANG SANDATA (SCHOOL FOR SOLDIERS WITHOUT ARMS) ▲';
+            } else {
+                content.style.display = 'none';
+                this.innerHTML = '1. PAGSASANAY NG KAWAL NA WALANG SANDATA (SCHOOL FOR SOLDIERS WITHOUT ARMS) ▼';
+            }
+        });
+    </script>
+</body>
+</html>
