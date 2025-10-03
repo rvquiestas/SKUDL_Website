@@ -5,22 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SKUDL - Command and Execution</title>
 
-    <!-- Navbar Style -->
-    <link rel="stylesheet" href="../styles/nav_component.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500;700&family=Oswald:wght@700&display=swap" rel="stylesheet">
-
+    <!-- Global Styles  -->
+    <link rel="stylesheet" href="../styles/global.css">
+    
+    <!-- Component-specific Styles -->
+    <link rel="stylesheet" href="../styles/navbar.css">
+    <link rel="stylesheet" href="../styles/toolbar_searchBar.css">
+    <link rel="stylesheet" href="../styles/command-list-styles/command-list.css">
 
 </head>
+
 <body>
 
     <!-- Navbar -->
     <t-navbar></t-navbar>
     <script src="../components/navbar.js"></script>
 
-    <!-- Command and Execution -->
-     
+    <!-- Toolbar and Search Bar -->
+    <t-tool-search-bar></t-tool-search-bar>
+    <script src="../components/toolbar_searchBar.js"></script>
+
+    <!-- List of Commands -->
+    <div class="commList-container">
+        <t-command-list></t-command-list>
+        <script src="../components/command-list-script/t-command-list.js"></script>
+        <script src="../components/command-list-script/t-cards-container.js"></script>
+        <script src="../components/command-list-script/t-card.js"></script>   
+    </div>
+
     
 </body>
+
 </html>
-
-

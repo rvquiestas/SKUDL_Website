@@ -17,7 +17,7 @@ class TNavbar extends HTMLElement {
             </button>
             <nav id="main-nav">
                 <a href="#">Home</a>
-                <a href="#">Commands & Drills</a>
+                <a href="../pages/command_page.html" style="color: #e0e4a0; text-decoration: underline">Commands & Drills</a> 
                 <a href="#">Activities</a>
                 <a href="#">The SKUDL</a>
             </nav>
