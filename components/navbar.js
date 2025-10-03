@@ -4,7 +4,7 @@ class TNavbar extends HTMLElement {
         this.innerHTML = `
     <header id="navbar">
         <div class="container">
-            <a href="index.html" style="text-decoration: none;">
+            <a href="#" style="text-decoration: none;">
                 <h1 class="logo">
                     <img src="../img/SKUDL.png" alt="SKUDL: ROTC Precision Training" class="logo-img">
                     SKUDL CAT/ROTC
