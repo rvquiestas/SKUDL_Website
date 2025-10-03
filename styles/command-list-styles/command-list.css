@@ -1,0 +1,291 @@
+/* navbar.css - Only navbar styles */
+@import url('./global.css'); /* Import global first */
+
+/* Command List Styles */
+.command-list {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: 2px solid #dae066;
+    overflow: hidden;
+}
+
+.command-item {
+    border-bottom: 1px solid #eaeaea;
+}
+
+.command-item:last-child {
+    border-bottom: none;
+}
+
+.command-header {
+    padding: 20px;
+    background-color: #f8f9f0;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s;
+}
+
+.command-header:hover {
+    background-color: #e9ecef;
+}
+
+.command-header h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #3d3e1e;
+    margin: 0;
+    flex: 1;
+}
+
+.command-icon {
+    font-size: 20px;
+    color: #3d3e1e;
+    font-weight: bold;
+    transition: transform 0.3s;
+}
+
+.command-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+    background-color: white;
+}
+
+.command-item.active .command-content {
+    max-height: 1000px;
+}
+
+.command-item.active .command-icon {
+    transform: rotate(180deg);
+}
+
+/* Cards Container Styles */
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    padding: 30px;
+}
+
+/* Card Styles - Updated Design */
+.card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid #eaeaea;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.card-image {
+    width: 100%;
+    height: 140px;
+    overflow: hidden;
+    background: #3d3e1e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-image .image-placeholder {
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    padding: 20px;
+}
+
+.card-content {
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #3d3e1e;
+    margin-bottom: 8px;
+    line-height: 1.3;
+}
+
+.card-description {
+    font-size: 13px;
+    color: #757c27;
+    line-height: 1.4;
+    margin-bottom: 20px;
+    flex: 1;
+}
+
+.card-button {
+    display: inline-block;
+    background-color: #757c27;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 13px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+.card-button:hover {
+    background-color: #3d3e1e;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(44, 62, 80, 0.3);
+}
+
+/* Responsive Design - Tablet */
+@media (max-width: 1200px) {
+    .cards-container {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 18px;
+        padding: 25px;
+    }
+    
+    .card-image {
+        height: 130px;
+    }
+    
+    .card-content {
+        padding: 18px;
+    }
+    
+    .card-title {
+        font-size: 15px;
+    }
+    
+    .card-description {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 992px) {
+    .cards-container {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+        padding: 20px;
+    }
+    
+    .card-image {
+        height: 120px;
+    }
+    
+    .card-content {
+        padding: 16px;
+    }
+}
+
+/* Responsive Design - Mobile Landscape */
+@media (max-width: 768px) {
+    .cards-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        padding: 20px;
+    }
+    
+    .command-header h3 {
+        font-size: 16px;
+    }
+    
+    .command-header {
+        padding: 15px;
+    }
+    
+    .card-image {
+        height: 110px;
+    }
+    
+    .card-content {
+        padding: 15px;
+    }
+    
+    .card-title {
+        font-size: 14px;
+    }
+    
+    .card-description {
+        font-size: 12px;
+        margin-bottom: 15px;
+    }
+    
+    .card-button {
+        padding: 8px 14px;
+        font-size: 12px;
+    }
+}
+
+/* Responsive Design - Mobile Portrait */
+@media (max-width: 576px) {
+    .cards-container {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 15px;
+    }
+    
+    .command-header h3 {
+        font-size: 14px;
+    }
+    
+    .card-image {
+        height: 140px;
+    }
+    
+    .card-content {
+        padding: 15px;
+    }
+    
+    .card-title {
+        font-size: 16px;
+    }
+    
+    .card-description {
+        font-size: 14px;
+    }
+}
+
+/* Extra Small Devices */
+@media (max-width: 380px) {
+    .cards-container {
+        padding: 12px;
+        gap: 12px;
+    }
+    
+    .card-image {
+        height: 120px;
+    }
+    
+    .card-content {
+        padding: 12px;
+    }
+    
+    .card-title {
+        font-size: 15px;
+    }
+    
+    .card-description {
+        font-size: 13px;
+    }
+}

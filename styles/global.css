@@ -1,0 +1,59 @@
+/* global.css - Import this in ALL pages */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500;700&family=Oswald:wght@700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* ========== CSS Variables (Used everywhere) ========== */
+:root {
+    --color-primary: #3d3e1e;
+    --color-secondary: #dae066;
+    --color-accent-hover: #e0e4a0;
+    --color-dark: #181818;
+    --color-darker-gray: #111111;
+    --color-medium-gray: #5f6259;
+    --color-light: #dedede;
+    --color-muted-olive: #757c27;
+    --color-white: #ffffff;
+
+    --font-heading: 'Oswald', sans-serif;
+    --font-body: 'Roboto Mono', monospace;
+    --font-modern: 'Inter', sans-serif;
+}
+
+/* ========== Global Reset ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    line-height: 1.6;
+    color: var(--color-dark);
+    background-color: white;
+    overflow-x: hidden;
+}
+
+/* ========== Utility Classes ========== */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.tool-container {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 3rem;
+    width: 100%;
+}
+
+.commList-container {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 3rem;
+}
+
+/* Add more utilities as needed */
+.text-center { text-align: center; }
+.mt-1 { margin-top: 1rem; }
+.mt-2 { margin-top: 2rem; }
